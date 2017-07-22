@@ -3,6 +3,18 @@ import dryscrape
 import time
 
 def links_scraper(pages):
+	''' Returns array of news links from the pag in my_url(emol.cl)
+	
+	Gets links to news page from the emol nacional category using a 
+	web scraper to use page's Javascript and navigate through it.
+	
+	Arguments:
+		pages {Number} -- The number of pages to scrap for links 
+							in the site's counting bar 
+	
+	Returns:
+		List of numbers -- Links to news pages
+	'''
 	my_url = "http://www.emol.com/nacional/"
 	session = dryscrape.Session()
 	session.set_attribute('auto_load_images', False)
